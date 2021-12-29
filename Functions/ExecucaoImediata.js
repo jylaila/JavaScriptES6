@@ -1,3 +1,4 @@
+//funcao de execução imediata (IIFE)
 (() => {
   this.name = "Nome no contexto de criação";
 
