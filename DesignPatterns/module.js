@@ -10,20 +10,19 @@
 // //como usar
 // import Pessoa from './models/pessoa'
 
-
 //Node
-let nome = 'default';
+let nome = "default";
 
-function getNome(){
-    return nome;
+function getNome() {
+  return nome;
 }
 
-function setNome(novoNome){
-    nome = novoNome;
+function setNome(novoNome) {
+  nome = novoNome;
 }
 
-module.exports={
-    setNome,
-    getNome
+module.exports = {
+  setNome,
+  getNome,
 };
 //para testar, veja o arquivo module-import.js

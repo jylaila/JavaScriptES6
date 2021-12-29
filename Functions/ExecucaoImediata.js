@@ -3,11 +3,11 @@
   this.name = "Nome no contexto de criação";
 
   //nome da função = (parametros) return => valor
-  const getNameArrow = () => this.name;//vai sempre referenciar o escopo da função
+  const getNameArrow = () => this.name; //vai sempre referenciar o escopo da função
 
   //equivalente
   function getName() {
-    return this.name;//referencia o contexto que foi executada
+    return this.name; //referencia o contexto que foi executada
   }
 
   const user = {
@@ -16,5 +16,5 @@
     getName,
   };
   console.log(user.getNameArrow()); //imprime o name do contexto global (arrow function)
-  console.log(user.getName());//imprime o name do contexto em que foi chamado
+  console.log(user.getName()); //imprime o name do contexto em que foi chamado
 })();

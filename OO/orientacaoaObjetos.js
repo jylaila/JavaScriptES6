@@ -1,13 +1,13 @@
-function Carro(marca){
-    this.marca = marca; //crio atributo marca
+function Carro(marca) {
+  this.marca = marca; //crio atributo marca
 
-    //crio o método buzinar
-    this.buzinar = function(){
-        console.log('Fom Fom');
-    }
+  //crio o método buzinar
+  this.buzinar = function () {
+    console.log("Fom Fom");
+  };
 }
 
-const monsa = new Carro('VW'); //instância
+const monsa = new Carro("VW"); //instância
 
 console.log(monsa.marca);
 

@@ -1,23 +1,23 @@
 //par chave : valor
 
 const user = {
-    email: 'janaina@email.com',
-    senha:'1234'
+  email: "janaina@email.com",
+  senha: "1234",
 };
 
 //alterando a propriedade de um objeto
-user.email = 'janainaprof@email.com';
-user['email']= 'janainaprof@email.com';
+user.email = "janainaprof@email.com";
+user["email"] = "janainaprof@email.com";
 
 //receber uma propriedade de forma dinamica
-function getProp(prop){
-    return user[prop];
+function getProp(prop) {
+  return user[prop];
 }
 
-getProp('name');
+getProp("name");
 
 //criando uma nova propriedade
-user.login = 'janaina';
+user.login = "janaina";
 
 console.log(user);
 
@@ -34,12 +34,12 @@ console.log(Object.keys(user));
 console.log(Object.entries(user));
 
 //mergeando uma propriedade em outro objeto
-Object.assign(user, {data:'17/12/2021'});
+Object.assign(user, { data: "17/12/2021" });
 console.log(user);
 
 //previne alterações no objeto
 const alunos = {
-    nota : 7
+  nota: 7,
 };
 Object.freeze(alunos);
 alunos.nota = 8;
@@ -47,5 +47,3 @@ console.log(alunos);
 
 //permite a alteração do objeto
 Object.seal(alunos);
-
-

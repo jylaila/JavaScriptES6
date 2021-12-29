@@ -2,7 +2,7 @@ class Carro {
   constructor(portas) {
     this.portas = portas;
   }
-  ligar(){};
+  ligar() {}
 }
 
 class Popular extends Carro {
@@ -11,8 +11,8 @@ class Popular extends Carro {
     super(4); //construtor classe pai
     this.motor = motor;
   }
-  buzinar(){
-      console.log("Fom Fom");
+  buzinar() {
+    console.log("Fom Fom");
   }
 }
 

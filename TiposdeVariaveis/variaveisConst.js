@@ -10,31 +10,30 @@
   console.log(`valor após a execução do if ${teste}`); //imprime Exemplo
 })();
 
-
 //const tipos primitivos, não permite alterações
-const nome = 'Janaina'
+const nome = "Janaina";
 
-name = 'Universidade'; // erro
+name = "Universidade"; // erro
 
 const user = {
-    nome: 'Janaina'
+  nome: "Janaina",
 };
 
 //se for objeto posso alterar o valor
-user.nome = 'Universidade'
+user.nome = "Universidade";
 
 //não podemos fazer o objeto apontar para outro lugar
 user = {
-    nome: 'Universidade'
+  nome: "Universidade",
 };
 
-const pessoas = ['Janaina', 'Cindy', 'Taylor'];
+const pessoas = ["Janaina", "Cindy", "Taylor"];
 
 //podemos adicionar novos itens
-pessoas.push('Noah');
+pessoas.push("Noah");
 
 //podemos remover itens
-pessoas.shift();//remove primeiro elemento do array
+pessoas.shift(); //remove primeiro elemento do array
 
 //podemos alterar diretamente
-pessoas[1] = 'Cindy S'
+pessoas[1] = "Cindy S";

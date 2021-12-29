@@ -14,4 +14,4 @@ function getFuncionarioCargo(funcionario) {
 const funcionarioCargo = getFuncionarioCargo(funcionario);
 
 //retorna novo objeto + funcionarioCargo
-console.log(funcionarioCargo)
+console.log(funcionarioCargo);

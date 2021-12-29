@@ -25,43 +25,44 @@ const students = [
 ];
 
 //qtde de elementos de um array
-console.log('Qtde de Elementos: ', students.length);
+console.log("Qtde de Elementos: ", students.length);
 
 //verificar se é array
-console.log('É array? ', Array.isArray(students));
+console.log("É array? ", Array.isArray(students));
 
 //iterar entre os elementos do array
-students.forEach(student=>{
-    console.log(`nome: ${student.name}`);
+students.forEach((student) => {
+  console.log(`nome: ${student.name}`);
 });
 
 //filtrar o array
 //variavel =array.filter(parametro=>paramento.valor ==== valor)
-const mens = students.filter(student=>student.gender === gender.MAN);
-console.log('Lista de meninos: ', mens);
+const mens = students.filter((student) => student.gender === gender.MAN);
+console.log("Lista de meninos: ", mens);
 
 //filter, map e reduce não alteram a referencia ao objeto, retornam um novo, não altera o original
 //retorna um novo array, adiciona um curso no array
-const studentsWithCourse = students.map(student =>{
-    student.course = 'JavaScript';
-    return student;
+const studentsWithCourse = students.map((student) => {
+  student.course = "JavaScript";
+  return student;
 });
-console.log('Alunos com curso:', studentsWithCourse );
+console.log("Alunos com curso:", studentsWithCourse);
 
 //Transformar um array em outro tipo
 // reduce(parametro que será retornado, array)
-const totalAge = students.reduce((age, student)=>{
-    age += student.age;
-    return age;
-},0); //0 valor inicial da propriedade
+const totalAge = students.reduce((age, student) => {
+  age += student.age;
+  return age;
+}, 0); //0 valor inicial da propriedade
 
-console.log('Soma das idades:', totalAge);
+console.log("Soma das idades:", totalAge);
 
 //juntando as operações
-const totalEvenAges = students.filter(student=>student.age%2 ===0).
-reduce((age, student )=>{
+const totalEvenAges = students
+  .filter((student) => student.age % 2 === 0)
+  .reduce((age, student) => {
     age += student.age;
     return age;
-    }, 0);
+  }, 0);
 
-console.log('Soma das idades pares: ', totalEvenAges);
+console.log("Soma das idades pares: ", totalEvenAges);

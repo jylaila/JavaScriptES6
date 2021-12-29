@@ -3,7 +3,7 @@
 function imprime() {
   console.log(mensagem); //undefined
 
-  var mensagem = 'Hello World';
+  var mensagem = "Hello World";
 
   console.log(mensagem);
 }

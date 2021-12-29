@@ -7,7 +7,6 @@
 
 // }
 
-
 //quando a primeira condição for verdadeira, sai do if
 const numeros = [1, 2, 3, 4, 5];
 
@@ -18,10 +17,7 @@ numeros.forEach((item) => {
     console.log("O numero", item, "é divisivel por 3");
   } else if (item % 5 == 0) {
     console.log("O numero", item, "é divisivel por 5");
-  }
-  else{
+  } else {
     console.log("O numero", item, "não é divisivel por nenhum acima");
   }
 });
-
-

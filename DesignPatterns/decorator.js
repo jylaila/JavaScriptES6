@@ -3,14 +3,14 @@
 
 let loggedIn = true;
 
-function callIfAuthenticated(fn){
-    return !!loggedIn && fn();
+function callIfAuthenticated(fn) {
+  return !!loggedIn && fn();
 }
 
-function sum(a,b){
-    return a + b;
+function sum(a, b) {
+  return a + b;
 }
 //decorator
-console.log(callIfAuthenticated(()=>sum(2,3)));//5
+console.log(callIfAuthenticated(() => sum(2, 3))); //5
 loggedIn = false;
-console.log(callIfAuthenticated(()=>sum(2,3)));//não imprime nada
+console.log(callIfAuthenticated(() => sum(2, 3))); //não imprime nada
