@@ -7,3 +7,15 @@ https://babeljs.io/
 //Instalar fetch
 npm i node-fetch
 
+//testes automatizados com o mocha
+ npm init -y  
+
+ //instalar como dependencia de desenvolvimento
+ npm i --save-dev mocha
+
+//alterar o package.json para que execute o mocha
+
+//por padrão serão testados os arquivos que estiverem dentro do diretorio test
+
+//para testar usar o comando
+npm run test
