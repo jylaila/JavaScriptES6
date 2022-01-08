@@ -1,6 +1,10 @@
 //para testar usamos o assert
 const assert = require("assert");
 const Math = require("../src/math");
+
+//chai mais claro os comandos que o assert
+const expect = require("chai").expect;
+
 const math = new Math();
 
 //descrever os testes com a função describe
@@ -33,24 +37,43 @@ describe("Math Class", function () {
     });
   });
 
-  it("Div two number");//pendente
+  it("Div two number"); //pendente
 
   //usamos o only para que seja o unico teste executado
   it.only("executa apenas um teste");
 
   //skip ignora o teste
-  it.skip("Test", function(){
-      assert.equal(math.sub(10,10),0);
+  it.skip("Test", function () {
+    assert.equal(math.sub(10, 10), 0);
   });
 
   //hooks permite executar códigos e evitar repetições
-//   this.beforeAll
-//   this.afterAll
-//   this.afterEach
-  this.beforeEach(function(){
-      //codigo que será executado antes da execução das funções
-      //exemplo
-      //instanciar a classe antes de cada execução, definir valor para variável etc
-  })
+  //   this.beforeAll
+  //   this.afterAll
+  //   this.afterEach
+  this.beforeEach(function () {
+    //codigo que será executado antes da execução das funções
+    //exemplo
+    //instanciar a classe antes de cada execução, definir valor para variável etc
+  });
 
+  //usando o chai
+  //permite documentar melhor os teste
+  it("Mult two numbers Assincrono", function (done) {
+    this.timeout(3000);
+    math.sub(5, 5, (value) => {
+      expect(value).to.equal(0);
+      done();
+    });
+  });
+
+  it("Test", function () {
+    expect(math.sub(10, 10)).to.equal(0);
+  });
+  it.only("Verifica objeto", function () {
+    const obj={
+        nome: 'Janaina'
+    }
+    expect(obj).to.have.property('nome').to.equal('Janaina');
+  });
 });

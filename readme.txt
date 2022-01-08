@@ -19,3 +19,6 @@ npm i node-fetch
 
 //para testar usar o comando
 npm run test
+
+//instalar o chai
+npm i --save-dev chai
